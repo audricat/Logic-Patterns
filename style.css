@@ -1,0 +1,79 @@
+body {
+      margin: 0;
+      background: black;
+     }
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+    transform: scale(.$number5);
+  }
+}
+
+#loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  background: white;
+  transition: 1.5s linear;
+}
+
+#content {
+  position: center;
+  z-index: 1;
+}
+
+.spinner-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0;
+}
+
+.pulse-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pulse-bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #932e3e;
+}
+
+.pulse-bubble-1 {
+  animation: pulse .4s ease 0s infinite alternate;
+}
+
+.pulse-bubble-2 {
+  animation: pulse .4s ease .2s infinite alternate;
+}
+
+.pulse-bubble-3 {
+  animation: pulse .4s ease .4s infinite alternate;
+}
+
+pre {
+     font-size: 20px;
+     font-family: "Courier New", monospace;
+     letter-spacing: 8px;
+     text-align: center;
+     color: #03A062;
+     }
